@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std; 
+
+class factorial{
+
+int n,i,f;
+public:
+void get(){
+    cout<<"enter number :";
+    cin>>n;
+}
+void result(){
+   f=1;
+for(i=1;i<=n;i++){
+    f=f*i;
+    
+}
+cout<<"factorial is :"<<f;
+}
+};
+int main(){
+    factorial r;
+    r.get();
+    r.result();
+    return 0;
+}

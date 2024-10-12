@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+class aa
+{
+    int a;
+
+public:
+    void getdata()
+    {
+        cout << "Enter number";
+        cin >> a;
+    }
+    void dis()
+    {
+        cout << a;
+    }
+
+    aa operator+(aa x)
+    {
+        aa y;
+       y.a=a+x.a;
+        return y;
+    }
+};
+int main()
+{
+    aa b1, b2, b3;
+    b1.getdata();
+    b2.getdata();
+    b3 = b1 + b2;
+    b3.dis();
+
+    return 0;
+}

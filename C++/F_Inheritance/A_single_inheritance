@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std; 
+
+class a{
+protected:
+int x,y;
+public:
+
+void get(){
+    cout<<"enter";
+    cin>>x>>y;
+}
+};
+
+
+class b:public a{
+public:
+void dis(){
+    cout<<x+y;
+}
+};
+
+int main (){
+b o;
+o.get();
+o.dis();
+return 0;
+}

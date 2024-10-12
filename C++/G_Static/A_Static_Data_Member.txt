@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+class demo
+{
+int a;
+static int b;
+
+public:
+   void get(){
+    cout<<"enter";
+    cin>>a;
+   }
+
+   void dis(){
+    cout<<a+b;
+   }
+
+
+};
+
+int demo::b=5;
+
+int main(){
+    demo o;
+    o.get();
+    o.dis();
+
+    return 0;
+}

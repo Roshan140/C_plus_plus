@@ -1,0 +1,475 @@
+#include <iostream>
+using namespace std;
+
+class level
+{
+protected:
+    int select_level;
+
+public:
+    void s_level()
+    {
+        cout << "-----------------------------------WELCOME TO QUIZE--------------------" << endl;
+        cout << "Select level" << endl;
+        cout << "1.Easy level" << endl;
+        cout << "2.Medium level" << endl;
+        cout << "3.Hard level" << endl;
+        cin >> select_level;
+    }
+};
+class quize : public level
+{
+    int c1, c2, c3, c4, c5;
+    
+    int s = 0;
+
+public:
+    void l()
+    {
+        if (select_level == 1)
+        {
+            cout << "" << endl;
+            cout << "------------------------------------WELCOME TO EASY LEVEL----------------------------------" << endl;
+            cout << "Choice options" << endl;
+
+            cout << "" << endl;
+            cout << "Who invented C++?" << endl;
+            cout << "1.Bjarne Stroustrup" << endl
+                 << "2.Brian Kernighan" << endl
+                 << "3.Ken Thompson" << endl
+                 << "4. Dennis Ritchie" << endl;
+            cout << "Enter options :";
+            cin >> c1;
+
+            cout << "" << endl;
+            cout << "What is the extension of c++" << endl;
+            cout << "1..hg" << endl
+                 << "2..js" << endl
+                 << "3..py" << endl
+                 << "4. .cpp" << endl;
+            cout << "Enter options :";
+            cin >> c2;
+
+            cout << "" << endl;
+            cout << "Which of the following is the correct syntax to add the header file in the C++ program?" << endl;
+            cout << "1.#include<userdefined>" << endl
+                 << "2.#include userdefined.h" << endl
+                 << "3.<include> userdefined.h" << endl
+                 << "4. Both a & b" << endl;
+            cout << "Enter options :";
+            cin >> c3;
+
+            cout << "" << endl;
+            cout << "Which of the following is the correct identifier?" << endl;
+            cout << "1.$var_name" << endl
+                 << "2.VAR_123" << endl
+                 << "3.varname@" << endl
+                 << "4.None" << endl;
+            cout << "Enter options :";
+            cin >> c4;
+
+            cout << "" << endl;
+            cout << " Which of the following is used for comments in C++?" << endl;
+            cout << "1./* */" << endl
+                 << "2.// //" << endl
+                 << "3./" << endl
+                 << "4.Both a & b" << endl;
+            cout << "Enter options :";
+            cin >> c5;
+        }
+
+        else if (select_level == 2)
+        {
+            cout << "----------------------------------------------WELCOME TO MEDIUM LEVEL------------------------------" << endl;
+
+            cout << "Choice options" << endl;
+
+            cout << "" << endl;
+            cout << "C++ uses which approach?" << endl;
+            cout << "1.right-left" << endl
+                 << "2.left-right" << endl
+                 << "3.top-bottom" << endl
+                 << "4.bottom-top" << endl;
+            cout << "Enter options :";
+            cin >> c1;
+
+            cout << "" << endl;
+            cout << "The programming language that has the ability to create new data types is called" << endl;
+            cout << "1.Overloaded" << endl
+                 << "2.Encapsulated" << endl
+                 << "3.Reprehensible" << endl
+                 << "4.Extensible" << endl;
+            cout << "Enter options :";
+            cin >> c2;
+
+            cout << "" << endl;
+            cout << "The C++ language is ______ object-oriented language." << endl;
+            cout << "1.Pure Object oriented" << endl
+                 << "2.Not Object oriented" << endl
+                 << "3.Semi Object-oriented or Partial Object-oriented" << endl
+                 << "4.None of the above" << endl;
+            cout << "Enter options :";
+            cin >> c3;
+
+            cout << "" << endl;
+            cout << "Which of the following refers to characteristics of an array?" << endl;
+            cout << "1. An array is a set of similar data items" << endl;
+            cout << "2. An array is a set of distinct data items" << endl;
+            cout << "3. An array can hold different types of datatypes" << endl;
+            cout << "4. None of the above" << endl;
+
+            cout << "Enter options :";
+            cin >> c4;
+
+            cout << "" << endl;
+            cout << "Which of the following is the correct syntax for declaring the array?" << endl;
+            cout << "1. init array []" << endl;
+            cout << "2. int array [5];" << endl;
+            cout << "3. Array[5];" << endl;
+            cout << "4. None of the above" << endl;
+
+            cout << "Enter options :";
+            cin >> c5;
+        }
+
+        else if (select_level == 3)
+        {
+            cout << "" << endl;
+            cout << "------------------------------------WELCOME TO HARD LEVEL----------------------------------" << endl;
+            cout << "Choice options" << endl;
+
+            cout << "What will be the output of the following C++ code?" << endl;
+            cout << "```cpp" << endl;
+            cout << "#include <iostream>" << endl;
+            cout << "using namespace std;" << endl;
+            cout << "int main() {" << endl;
+            cout << "    int x = 10;" << endl;
+            cout << "    int y = ++x + x++;" << endl;
+            cout << "    cout << y << endl;" << endl;
+            cout << "    return 0;" << endl;
+            cout << "}" << endl;
+            cout << "```" << endl;
+            cout << "1. 21" << endl;
+            cout << "2. 22" << endl;
+            cout << "3. 23" << endl;
+            cout << "4. 24" << endl;
+
+            cout << "Enter options :";
+            cin >> c1;
+
+            cout << "" << endl;
+            cout << "What will be the value of 'x' after the following C++ code?" << endl;
+            cout << "```cpp" << endl;
+            cout << "#include <iostream>" << endl;
+            cout << "using namespace std;" << endl;
+            cout << "int main() {" << endl;
+            cout << "    int x = 10;" << endl;
+            cout << "    x = x++ + x;" << endl;
+            cout << "    cout << x << endl;";
+            cout << "    return 0;" << endl;
+            cout << "}" << endl;
+            cout << "```" << endl;
+            cout << "1. 20" << endl;
+            cout << "2. 21" << endl;
+            cout << "3. 22" << endl;
+            cout << "4. 23" << endl;
+            cout << "Enter options :";
+            cin >> c2;
+
+            cout << "" << endl;
+            cout << "Which of the following correctly declares a pointer to a constant integer in C++?" << endl;
+            cout << "1. int* const ptr;" << endl;
+            cout << "2. const int* ptr;" << endl;
+            cout << "3. const int* const ptr;" << endl;
+            cout << "4. int const* ptr;" << endl;
+            cout << "Enter options :";
+            cin >> c3;
+
+            cout << "" << endl;
+            cout << "What is the output of the following C++ code?" << endl;
+            cout << "```cpp" << endl;
+            cout << "#include <iostream>" << endl;
+            cout << "using namespace std;" << endl;
+            cout << "int main() {" << endl;
+            cout << "    int x = 5;" << endl;
+            cout << "    int y = (x++) + (++x);" << endl;
+            cout << "    cout << y << endl;";
+            cout << "    return 0;" << endl;
+            cout << "}" << endl;
+            cout << "```" << endl;
+            cout << "1. 11" << endl;
+            cout << "2. 12" << endl;
+            cout << "3. 13" << endl;
+            cout << "4. 14" << endl;
+            cout << "Enter options :";
+            cin >> c4;
+
+            cout << "" << endl;
+            cout << "What is the purpose of the 'const' keyword in C++?" << endl;
+            cout << "1. To indicate that a variable cannot be changed after initialization." << endl;
+            cout << "2. To create a constant pointer." << endl;
+            cout << "3. To define a constant value." << endl;
+            cout << "4. All of the above." << endl;
+            cout << "Enter options :";
+            cin >> c5;
+        }
+
+        else
+        {
+            cout << "Please enter 1 or 2 or 3 only"<<endl;
+        }
+    }
+
+    void echeck1()
+    {
+
+        if (c1 == 1)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 1" << endl;
+        }
+    }
+
+    void echeck2()
+    {
+
+        if (c2 == 4)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 4" << endl;
+        }
+    }
+
+    void echeck3()
+    {
+
+        if (c3 == 4)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 4" << endl;
+        }
+    }
+
+    void echeck4()
+    {
+
+        if (c4 == 2)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 2" << endl;
+        }
+    }
+
+    void echeck5()
+    {
+
+        if (c5 == 4)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 4" << endl;
+        }
+    }
+
+    void mcheck1()
+    {
+
+        if (c1 == 4)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 4" << endl;
+        }
+    }
+
+    void mcheck2()
+    {
+
+        if (c2 == 4)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 4" << endl;
+        }
+    }
+
+    void mcheck3()
+    {
+
+        if (c3 == 3)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 3" << endl;
+        }
+    }
+
+    void mcheck4()
+    {
+
+        if (c4 == 1)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 1" << endl;
+        }
+    }
+    void mcheck5()
+    {
+
+        if (c5 == 4)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 4" << endl;
+        }
+    }
+
+    void score()
+    {
+        cout << "Score is " << s;
+    }
+
+    void hcheck1()
+    {
+
+        if (c1 == 3)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 3" << endl;
+        }
+    }
+
+    void hcheck2()
+    {
+
+        if (c2 == 2)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 2" << endl;
+        }
+    }
+
+    void hcheck3()
+    {
+
+        if (c3 == 2)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 2" << endl;
+        }
+    }
+
+    void hcheck4()
+    {
+
+        if (c4 == 4)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 4" << endl;
+        }
+    }
+    void hcheck5()
+    {
+
+        if (c5 == 4)
+        {
+            cout << " \xfb Correct" << endl;
+            s++;
+        }
+        else
+        {
+            cout << " X Incorrect The correct answer is option 4" << endl;
+        }
+    }
+    void check()
+    {
+        if (select_level == 1)
+        {
+            echeck1();
+            echeck2();
+            echeck3();
+            echeck4();
+            echeck5();
+        }
+
+        if (select_level == 2)
+        {
+            mcheck1();
+            mcheck2();
+            mcheck3();
+            mcheck4();
+            mcheck5();
+        }
+
+        if (select_level == 3)
+        {
+            hcheck1();
+            hcheck2();
+            hcheck3();
+            hcheck4();
+            hcheck5();
+        }
+    }
+};
+
+int main()
+{
+
+    quize o;
+    o.s_level();
+    o.l();
+    o.check();
+    o.score();
+    return 0;
+}

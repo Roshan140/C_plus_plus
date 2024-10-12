@@ -1,0 +1,24 @@
+
+#include <iostream>
+using namespace std;
+
+class aa{
+    public:
+    virtual void hi()=0;
+};
+
+class bb:public aa{
+    public:
+    void hi(){
+        cout<<"hello";
+    }
+};
+int main() {
+    aa *o;
+    bb oo;
+    o=&oo;
+    o->hi();
+   
+
+    return 0;
+}

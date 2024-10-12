@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std; 
+
+class electicity{
+int unit,total;
+public:
+void get(){
+     cout<< "enter" ;
+     cin>>unit;
+}
+void result(){
+     if(unit<=100){
+          total = unit*5;
+     }
+     else if(unit<=300){
+          total = (100*5)+(unit-200)*7;          
+     }
+     else{
+          total = (100*5)+(200*7)+(unit-300)*9;
+     }
+cout<<"The bill is:"<<total+150;
+}
+};
+
+int main (){
+electicity o;
+o.get();
+o.result();
+return 0;
+}

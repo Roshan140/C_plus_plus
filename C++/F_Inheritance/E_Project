@@ -1,0 +1,102 @@
+//wirte a code using inheritance to get enter 3 students id,name,address form
+//  class a and in 
+// class b enter from user how many subject marks total you want and add the marks
+//  and in 
+// class c display all of them like this id-name-address-total_marks
+#include <iostream>
+#include<string>
+using namespace std;
+
+class a{
+    protected:
+    int id1,id2,id3;
+   string name1,name2,name3;
+    string add1,add2,add3;
+    public:
+    void get_first(){
+        cout<<"Enter first  student  id : ";
+        cin>>id1;
+        cout<<"Enter first  student  name : ";
+        cin>>name1;
+        cout<<"Enter first  student  address : ";
+        cin>>add1;
+    }
+    void get_second(){
+        cout<<"Enter second  student id : ";
+        cin>>id2;
+        cout<<"Enter second  student name : ";
+        cin>>name2;
+        cout<<"Enter second  student address : ";
+        cin>>add2;
+    }
+    void get_third(){
+        cout<<"Enter third  student id : ";
+        cin>>id3;
+        cout<<"Enter third  student name : ";
+        cin>>name3;
+        cout<<"Enter third  student address : ";
+        cin>>add3;
+    }
+};
+
+class b{
+  protected:
+  int s1,s2,s3,s4;
+  int t1=0,t2=0,t3=0,i,a;
+  public:
+  
+  void get_marks(){
+    cout<<"Enter how many subject marks sum do you want : ";
+    cin>>a;
+  }
+  void first_s(){
+
+    for(i=1;i<=a;i++){
+cout<<"Enter subject marks of first student : ";
+cin>>s1;
+t1=t1+s1;
+    }
+  }
+  
+  void second_s(){
+       for(i=1;i<=4;i++){
+cout<<"Enter subject marks of second student : ";
+cin>>s2;
+t2=t2+s2;
+    }
+      
+     
+  }
+   void third_s(){
+      for(i=1;i<=4;i++){
+ cout<<"Enter  subject marks of third student : ";
+cin>>s3;
+t3=t3+s3;
+    }
+     
+     
+  }
+};
+
+class c:public a,public b{
+  public:
+  void dis(){
+      cout<<id1<<"-"<<name1<<"-"<<add1<<"-"<<t1<<endl;
+      
+       cout<<id2<<"-"<<name2<<"-"<<add2<<"-"<<t2<<endl;
+       
+        cout<<id3<<"-"<<name3<<"-"<<add3<<"-"<<t3<<endl;
+  }
+};
+int main() {
+c o;
+o.get_first();
+o.get_second();
+o.get_third();
+o.get_marks();
+o.first_s();
+o.second_s();
+o.third_s();
+o.dis();
+    return 0;
+}

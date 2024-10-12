@@ -1,0 +1,12 @@
+
+#include <iostream>
+using namespace std;
+
+inline void get(int a,int b){
+    cout<<a*b;
+}
+
+int main() {
+    get(5,6);
+    return 0;
+}

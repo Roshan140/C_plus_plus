@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+class sum{
+    int n,s=0;
+public:
+void su(){
+     cout<< "enter" ;
+     cin>>n;
+}
+void u(){
+    n = n/10;
+    while(n>10){
+s = s+n%10;
+n=n/10;
+    }
+    cout<<s;
+}
+};
+
+int main(){
+    sum r;
+    r.su();
+    r.u();
+    return 0;
+}

@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std; 
+
+
+class a{
+protected:
+int x;
+public:
+
+void getx(){
+    cout<<"enter first value";
+    cin>>x;
+}
+};
+
+class b{
+protected:
+int y;
+public:
+
+void gety(){
+    cout<<"enter second value";
+    cin>>y;
+}
+};
+
+class c:public a,public b{
+    public:
+void dis(){
+cout<<"the sum is"<<x+y;
+};
+};
+
+
+int main (){
+c o;
+o.getx();
+o.gety();
+o.dis();
+return 0;
+}

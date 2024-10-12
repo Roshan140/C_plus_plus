@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std; 
+
+class sum{
+int n,s=0;
+public:
+
+sum(){
+    cout<<"enter";
+    cin>>n;
+
+    while (n!=0)
+    {
+        s = s+n%10;
+        n=n/10;
+    }
+    cout<<"sum is "<<s;
+    
+}
+
+};
+
+int main(){
+    sum sum;
+    return 0;
+}

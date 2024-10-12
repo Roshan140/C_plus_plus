@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+class sum{
+int num1,num2;
+public:
+sum(){
+    num1=3;
+    num2=3;
+}
+
+sum(int a,int b){
+    num1=a;
+    num2=b;
+}
+
+int add(){
+return num1+num2;
+}
+
+};
+
+int main(){
+    sum o1;
+    cout<<"sum with no argument "<<o1.add()<<endl;
+    sum o2(4,5);
+    cout<<"sum with argument"<<o2.add();
+    return 0;
+
+}

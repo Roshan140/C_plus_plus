@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std; 
+class a{
+protected:
+int x,y;
+public:
+
+void get(){
+cout<<"enter 2 numbers";
+cin>>x>>y;
+}
+};
+
+class b:public a{
+    public:
+    void add(){
+    cout<<"the sum is"<<x+y;
+    }
+};
+
+class c:public a{
+    public:
+    void sub(){
+    cout<<"the subtraction is"<<x-y;
+    }
+};
+
+
+
+int main (){
+
+b o;
+o.get();
+o.add();
+c oo;
+oo.get();
+oo.sub();
+return 0;
+}

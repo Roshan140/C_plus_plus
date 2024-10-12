@@ -1,0 +1,133 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+class get
+{
+public:
+    string a;
+    string choice;
+
+    void get_a()
+    {
+      
+        cout << "Enter rock paper or scissors :";
+        cin >> a;
+
+        if(a!="rock" && a!="paper" && a!="scissors"){
+            cout<<"Enter rock or paper or scissors only"<<endl;
+         exit(0);
+        }
+    }
+
+
+};
+
+class computer
+{
+public:
+    string r;
+    void get_computer()
+    {
+        srand(time(0));
+        string words[] = {"rock", "paper", "scissors"};
+        int randomIndex = rand() % 3;
+        r = words[randomIndex];
+        cout << "Computer : " << r << endl;
+    }
+};
+
+class logic : public get, public computer
+{
+    int s_user = 0, s_computer = 0;
+
+public:
+    void result()
+    {
+
+        if (r == "rock" && a == "scissors")
+        {
+            cout << "Computer Win" << endl;
+            s_computer ++;
+        }
+        else if (r == "paper" && a == "rock")
+        {
+            cout << "Computer Win" << endl;
+            s_computer ++;
+        }
+        else if (r == "scissor" && a == "paper")
+        {
+            cout << "Computer Win" << endl;
+            s_computer ++;
+        }
+        else if (r == a)
+        {
+            cout << "Draw" << endl;
+            s_computer ++;
+            s_user ++;
+        }
+        else
+        {
+            cout << "You win" << endl;
+            s_user ++;
+        }
+    }
+
+    void display_score()
+    {
+        cout << "Your score : " << s_user << endl;
+        cout << "Computer score :" << s_computer << endl;
+    }
+    void user_choice()
+    {
+
+        cout << "Do you want to continue this game enter yes or no :";
+        cin >> choice;
+    }
+};
+
+int main()
+{
+
+    logic o;
+    o.get_a();
+    o.get_computer();
+    o.result();
+    o.display_score();
+    o.user_choice();
+
+if(o.choice == "no"){
+    return 0;
+}
+
+  else if (o.choice == "yes")
+  x:
+        while (true)
+        {
+            logic o;
+            o.get_a();
+            o.get_computer();
+            o.result();
+            o.display_score();
+          string c;
+           cout << "Do you want to continue this game enter yes or no :";
+        cin >> c;
+if(c=="no"){
+    return 0;
+}
+
+  else if (c=="yes"){
+goto x;
+  }
+
+  else{
+    return 0;
+  }
+
+        }
+    else
+    {
+        return 0;
+    }
+}

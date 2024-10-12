@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+class a{
+    public:
+    void hi(){
+        cout<<"hi";
+    }
+};
+
+class b:public a{
+    public:
+    void hi(){
+        cout<<"hello";
+    }
+};
+
+int main(){
+b o;
+o.hi();
+}

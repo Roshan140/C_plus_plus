@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+class factor{
+
+    int n,i;
+    public:
+    void get(){
+        cout<<"Enter number :";
+        cin>>n;
+    }
+    void r(){
+       
+        for(i=1;i<=n;i++){
+            if(n%i==0){
+                cout<<"The factor is :"<<i<<endl;
+            }
+        }
+       
+    }
+};
+
+int main(){
+    factor o;
+    o.get();
+    o.r();
+    return 0;
+}

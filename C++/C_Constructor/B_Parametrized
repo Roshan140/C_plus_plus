@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std; 
+
+class area
+{
+private:
+   int l,b;
+public:
+    area(int len,int bre){
+l = len;
+b = bre;
+
+    }
+
+   void result(){
+    cout<<l*b;
+   }
+};
+
+int main(){
+    int len,bre;
+cout<<"enter";
+cin>>len>>bre;
+
+    area r(len,bre);
+    r.result();
+    return 0;
+
+
+}

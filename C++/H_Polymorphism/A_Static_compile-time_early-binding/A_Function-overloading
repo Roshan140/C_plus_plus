@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std; 
+
+void s(int a,int b){
+    cout<<a+b<<endl;
+}
+
+void s(int x,int y,int z){
+    cout<<x*y*z;
+}
+
+int main (){
+int a,b,x,y,z;
+cout<<"enter a b";
+cin>>a>>b;
+
+cout<<"enter x,y,z";
+cin>>x>>y>>z;
+
+s(a,b);
+s(x,y,z);
+
+
+return 0;
+}

@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std; 
+
+class a{
+protected:
+int r;
+public:
+
+void get_roll(){
+    cout<<"enter roll";
+    cin>>r;
+}
+};
+
+class b: public a{
+    protected:
+    int m1,m2;
+    public:
+
+    void get_marks(){
+        cout<<"enter 2 marks";
+        cin>>m1>>m2;
+    }
+};
+
+class c: public b{
+    public:
+    void dis(){
+        cout<<"roll number is "<<r<<endl;
+        cout<<"total marks is "<<m1+m2<<endl;
+    }
+};
+int main (){
+c o;
+o.get_roll();
+o.get_marks();
+o.dis();
+return 0;
+}

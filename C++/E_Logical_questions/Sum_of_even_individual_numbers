@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std; 
+
+class sum_of_even_number
+{
+private:
+    int n,r,s,odd;
+public:
+   
+   void get(){
+     cout<< "enter" ;
+      cin>> n ;
+   }
+void re(){
+
+s=0;
+
+while (n!=0)
+{
+  r =n%10;
+  if (r%2==0)
+  {
+   s+=r;
+  
+  }
+   
+   n/=10;
+  
+ 
+}
+
+ cout<<s;
+
+}
+
+
+};
+
+
+
+
+int main (){
+sum_of_even_number o;
+o.get();
+o.re();
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

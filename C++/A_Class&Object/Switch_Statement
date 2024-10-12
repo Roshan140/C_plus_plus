@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+class calculation
+{
+    int result, a, b;
+    char symbol;
+
+public:
+    void get()
+    {
+        cout << "Enter number two numbers : ";
+        cin >> a >> b;
+        cout << "Enter symbol :";
+        cin >> symbol;
+    }
+    void s()
+    {
+        switch (symbol)
+        {
+        case '+':
+            result = a + b;
+            cout << "The result is :" << result;
+            break;
+
+        case '-':
+            result = a - b;
+            cout << "The result is : " << result;
+            break;
+
+        case '*':
+            result = a * b;
+            cout << "The result is :" << result;
+            break;
+
+        case '/':
+            result = a / b;
+            cout << "The result is :" << result;
+            break;
+
+            default:
+            cout<<"Ennter correct symbol";
+        }
+    }
+};
+
+int main()
+{
+    calculation o;
+    o.get();
+    o.s();
+    return 0;
+}

@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+class palindrome{
+
+int rev=0,r,n,num;
+
+public:
+
+void get(){
+cout<<"Enter";
+cin>>n;
+
+
+}
+
+void result(){
+    num = n;
+    do{
+        r = n%10;
+        rev = rev*10+r;
+        n = n/10;
+    }
+    while(n!=0);
+    if(num==rev){
+        cout<<"palindrome";
+    }
+    else{
+        cout<<"not";
+    }
+}
+};
+
+int main(){
+    palindrome a;
+    a.get();
+    a.result();
+    return 0;
+}
